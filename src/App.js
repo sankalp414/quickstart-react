@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./App.css";
+import "./App.css"
+import AuthForm from "./component/Form";
 import mondaySdk from "monday-sdk-js";
 import "monday-ui-react-core/dist/main.css";
 //Explore more Monday React Components here: https://style.monday.com/
@@ -31,11 +32,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <AttentionBox
+      {/* <AttentionBox
         title="Hello Monday Apps!"
         text={attentionBoxText}
         type="success"
-      />
+      /> */}
+      <AuthForm/>
     </div>
   );
 };
