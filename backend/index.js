@@ -21,9 +21,7 @@ app.get('/auth/callback', async (req, res) => {
         const response = await axios.post('https://auth.monday.com/oauth2/token', {
             client_id: client_id,
             client_secret: client_secret,
-            code: code,
             redirect_uri: redirect_uri,
-            grant_type: 'authorization_code'
         });
         const accessToken = response.data.access_token;
         
